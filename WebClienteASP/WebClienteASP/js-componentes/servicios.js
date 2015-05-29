@@ -41,14 +41,17 @@ servicios.factory("$servicios", function($http, $q)
    * @param {[function]}     : postcallback [Funcion a ejecutar posterior al callback]
    * @param {[object(json)]} : respuesta    [Objeto que contendra la respuesta]
    */
-  function ServicioAPI(url,datos,callback,postcallback,contenedor){
-    this.url=url;
-    this.datos=datos;
+  function ServicioAPI(url,datos,callbackb,postcallback,contenedor){
+    self = this;
+    this.url          = url;
+    this.datos        = datos;
+    this.contenedor   = contenedor;
+    this.objecto      = {};
     //Funciones a ejecutar despues de la llamada al webmethod
-    this.callback=callback;
-    this.postcallback=postcallback;
-    this.contenedor=contenedor;
-    this.objecto={};
+    this.callback     = callbackb;
+    this.postcallback = postcallback;
+    
+    
 
     /**
      * LLamar Servicio Rest
@@ -56,8 +59,7 @@ servicios.factory("$servicios", function($http, $q)
     this.llamarServicio = function(){
       $http.post(this.url, this.datos).success(
         function(respuesta){
-          this.contenedor.respuesta=respuesta;
-          this.callback(this.contenedor).then(this.objecto.postcallback(this.contenedor));
+          self.callback(this.contenedor,respuesta).then(self.postcallback(this.contenedor));
         }
       )
     };

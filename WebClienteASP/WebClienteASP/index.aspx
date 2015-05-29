@@ -21,8 +21,6 @@
     <md-content flex class="md-default-theme">
       <md-list>
         <md-list-item ng-click="navigateTo('data usage', $event)">
-          
-          
           <a ng-href="#/Cotizador"><md-button>Cotizador</md-button></a>
           <md-icon md-svg-icon="/iconos/toggle.svg"></md-icon>
         </md-list-item>
