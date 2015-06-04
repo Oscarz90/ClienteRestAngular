@@ -1,10 +1,11 @@
 //Declaracion de aplicacion de Angular.
-var app = angular.module("WebClientASP",['ngRoute','ngMaterial','Servicios']).config(function($mdThemingProvider) {
+var app = angular.module("WebClientASP",['ngRoute','ngMaterial','APIServicios']);
+
+app.config(function($mdThemingProvider){
   $mdThemingProvider.theme('default')
   .primaryPalette('blue')
   .accentPalette('orange');
 });
-
 //Configuracion de la aplicacion.
 //$routeProvider  para el manejo de vistas.
 app.config(function($routeProvider){

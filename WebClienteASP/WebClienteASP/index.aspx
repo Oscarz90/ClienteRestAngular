@@ -5,11 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="WebClientASP">
 <head runat="server">
 
-<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
 
-<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
-<title></title>
+  <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
+  <title></title>
 </head>
 <body layout="row">
   <!--Barra Navegacion Lateral-->
@@ -61,24 +61,24 @@
     </md-toolbar>
     <!-- Contenido Pagina -->
     <md-content layout-padding>
-      <!-- CONTENIDO AQUI -->
+      <!-- Cargado de Vistas Aqui -->
       <div ng-view>
 
       </div>
-      <!-- CONTENIDO AQUI -->
+      <!-- Cargado de Vistas Aqui -->
     </md-content>
   </div>
 
-  <!-- Librerias Necesarias -->
-  <script src="/node_modules/angular/angular.js"></script>
-  <script src="/node_modules/angular-route/angular-route.js"></script>
-  <script src="/node_modules/angular-aria/angular-aria.js"></script>
-  <script src="/node_modules/angular-animate/angular-animate.js"></script>
-  <script src="/node_modules/angular-material/angular-material.js"></script>
-  <script src="/js-componentes/app.js"></script>
-  <script src="/js-componentes/servicios.js"></script>
-  <script src="/controladores/CotizadorControlador.js"></script>
-  
-  
+<!-- Librerias Necesarias -->
+<script src="/node_modules/angular/angular.js"></script>
+<script src="/node_modules/angular-route/angular-route.js"></script>
+<script src="/node_modules/angular-aria/angular-aria.js"></script>
+<script src="/node_modules/angular-animate/angular-animate.js"></script>
+<script src="/node_modules/angular-material/angular-material.js"></script>
+<script src="/js-componentes/App.js"></script>
+<script src="/js-componentes/APIServicios.js"></script>
+<script src="/controladores/CotizadorControlador.js"></script>
+
+
 </body>
 </html>

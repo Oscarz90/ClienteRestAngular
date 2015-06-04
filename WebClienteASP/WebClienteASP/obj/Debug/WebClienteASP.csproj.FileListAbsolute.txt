@@ -21,7 +21,7 @@ C:\Users\430004587\Oscar\PRUEBAS\WebClienteASP\WebClienteASP\obj\Debug\WebClient
 C:\Users\430004587\Oscar\PRUEBAS\WebClienteASP\WebClienteASP\obj\Debug\WebClienteASP.pdb
 C:\Users\430004587\Oscar\PRUEBAS\ClienteRestAngular\WebClienteASP\WebClienteASP\bin\WebClienteASP.dll
 C:\Users\430004587\Oscar\PRUEBAS\ClienteRestAngular\WebClienteASP\WebClienteASP\bin\WebClienteASP.pdb
-C:\Users\430004587\Oscar\PRUEBAS\ClienteRestAngular\WebClienteASP\WebClienteASP\obj\Debug\WebClienteASP.csprojResolveAssemblyReference.cache
 C:\Users\430004587\Oscar\PRUEBAS\ClienteRestAngular\WebClienteASP\WebClienteASP\obj\Debug\WebClienteASP.dll
 C:\Users\430004587\Oscar\PRUEBAS\ClienteRestAngular\WebClienteASP\WebClienteASP\obj\Debug\WebClienteASP.pdb
 C:\Users\430004587\Oscar\PRUEBAS\ClienteRestAngular\WebClienteASP\WebClienteASP\bin\Public.Services.Autos.DataContracts.dll
+C:\Users\430004587\Oscar\PRUEBAS\ClienteRestAngular\WebClienteASP\WebClienteASP\obj\Debug\WebClienteASP.csprojResolveAssemblyReference.cache

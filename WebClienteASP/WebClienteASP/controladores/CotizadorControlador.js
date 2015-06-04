@@ -1,30 +1,33 @@
 //Agrega el controlador a la variable app Global de la aplicacion
-app.controller("CotizadorControlador",function($scope,$http,$q,$servicios){
-  
-  $scope.TiposVehiculos = new Object();
-
-  var callbackTipoVehiculo=function(contenedor,respuesta){
-    var retraso = $q.defer();
-    contenedor=angular.fromJson(respuesta.d,true);
-    console.log(contenedor);
-    retraso.resolve(contenedor);
-    return retraso.promise;
-  };
-
-  var aux=$q.defer;
-
+/*app.controller("CotizadorControlador",function($scope,$http,$q,APIServicios){
+  $scope.TipoVehiculos;
   $scope.ObtenerTipoVehiculo=function(){
-  $scope.TiposVehiculos.postcallback;
-  var ServicioTipoVehiculo = new $servicios.ServicioAPI(
-    '/Index.aspx/ObtenerTipoVehiculo'
-    , {}
-    , callbackTipoVehiculo
-    ,function(){ aux.resolve;}
-    ,$scope.TiposVehiculos);
+    //Crear Nueva Llamada Servicio
+    
+    APIServicios.async('/index.aspx/ObtenerTipoVehiculo',{}).then(
+      function(){
+        $scope.TipoVehiculos=APIServicios.Datos()
+      }
+      
+    );
 
-  ServicioTipoVehiculo.llamarServicio();
   };
   //* Callback para Tipo de Vehiculo *
   
 
-});
+});*/
+
+app.controller("CotizadorControlador",['$scope','$http','$q','APIServicios',function($scope,$http,$q,APIServicios){
+  $scope.TipoVehiculos;
+  $scope.ObtenerTipoVehiculo=function(){
+    //Crear Nueva Llamada Servicio
+    
+    APIServicios.async('/index.aspx/ObtenerTipoVehiculo',{}).then(
+      function(){
+        $scope.TipoVehiculos=APIServicios.Datos()
+      }
+      
+    );
+
+  };
+}]);
