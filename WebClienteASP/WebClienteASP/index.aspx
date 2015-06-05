@@ -7,67 +7,80 @@
 
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+  <link rel="stylesheet" href="/css-componentes/App.css"/>
 
   <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
   <title></title>
 </head>
 <body layout="row">
   <!--Barra Navegacion Lateral-->
-  <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z3" md-is-locked-open="$mdMedia('gt-md')" flex>
-    <md-toolbar class="md-toolbar-tools" >
-      <span>AngularApp</span>
-      <span flex></span>
-    </md-toolbar>
-    <md-content flex class="md-default-theme">
-      <md-list>
-        <md-list-item ng-click="navigateTo('data usage', $event)">
-          <a ng-href="#/Cotizador"><md-button>Cotizador</md-button></a>
-          <md-icon md-svg-icon="/iconos/toggle.svg"></md-icon>
-        </md-list-item>
-        <md-list-item ng-click="navigateTo('data usage', $event)">
-          <p>SubMenu2</p>
-        </md-list-item>
-        <md-list-item ng-click="navigateTo('data usage', $event)">
-          <p>SubMenu3</p>
-        </md-list-item>
-        <md-list-item ng-click="navigateTo('data usage', $event)">
-          <p>SubMenu4</p>
-        </md-list-item>
-        <md-list-item ng-click="navigateTo('data usage', $event)">
-          <p>SubMenu5</p>
-        </md-list-item>
-        <md-list-item ng-click="navigateTo('data usage', $event)">
-          <p>SubMenu6</p>
-        </md-list-item>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z5" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <span>GKN Tickets</span>
+          <!-- fill up the space between left and right area -->
+          <span flex></span>
+        </div>
+      </md-toolbar>
+      <md-content class="md-primary">
+        <md-list>
+          <md-list-item ng-click="1" class="md-warn md-accent">
+            <p>Cotizador</p>
+          </md-list-item>
+          <md-list-item ng-click="1" class="md-warn">
+            <p>Cotizador</p>
+          </md-list-item>
+          <md-list-item ng-click="1" class="md-warn">
+            <p>Cotizador</p>
+          </md-list-item>
+          <md-list-item ng-click="1" class="md-warn">
+            <p>Cotizador</p>
+          </md-list-item>
+          <md-list-item ng-click="1" class="md-warn">
+            <p>Cotizador</p>
+          </md-list-item>
+          <md-list-item ng-click="1" class="md-warn">
+            <p>Cotizador</p>
+          </md-list-item>
+          <md-list-item ng-click="1" class="md-warn">
+            <p>Cotizador</p>
+          </md-list-item>
+          <md-list-item ng-click="1" class="md-warn">
+            <p>Cotizador</p>
+          </md-list-item>
+          <md-list-item ng-click="1" class="md-warn">
+            <p>Cotizador</p>
+          </md-list-item>
+          <md-list-item ng-click="1" class="md-warn">
+            <p>Cotizador</p>
+          </md-list-item>
+        </md-list>
+      </md-content>
       </md-list>
-    </md-content>
-  </md-sidenav>
-  <!-- Contenido Principal -->
-  <div layout="column" flex>
-    <md-toolbar>
-      <div class="md-toolbar-tools md-whiteframe-z3">
-        <md-button class="md-icon-button" aria-label="Settings"  hide-gt-md="" ng-click="toggleLeftNav()">
-          <md-icon md-svg-icon="/iconos/menu.svg"></md-icon>
-        </md-button>
-        <span>Home>UbicacionX</span>
-        <span flex></span>
-        <md-button>
-          Other Button
-        </md-button>
-        <md-button class="md-icon-button" aria-label="Settings">
-          <md-icon md-svg-icon="/iconos/subMenu.svg"></md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
-    <!-- Contenido Pagina -->
-    <md-content layout-padding>
-      <!-- Cargado de Vistas Aqui -->
-      <div ng-view>
+    </md-sidenav>
+  <!--Barra Navegacion Lateral-->
 
-      </div>
-      <!-- Cargado de Vistas Aqui -->
-    </md-content>
-  </div>
+
+  <!-- Contenido -->
+    <div class="column" flex >
+      <md-toolbar class="md-whiteframe-z3 md-primary">
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" aria-label="Settings" hide-gt-md>
+            <md-icon md-svg-icon="iconos/menu.svg"></md-icon>
+          </md-button>
+          <p style="padding: 0px 0px 0px 10px;">Inicio > Ubicacion</p>
+          <span flex></span>
+          <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="/iconos/config.svg"></md-icon>
+        </md-button>
+        </div>
+      </md-toolbar>
+      <md-content>
+
+      <md-content>
+    </div>
+  <!-- Contenido -->
+  
 
 <!-- Librerias Necesarias -->
 <script src="/node_modules/angular/angular.js"></script>
