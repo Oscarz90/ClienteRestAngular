@@ -1,4 +1,7 @@
-//Declaracion de aplicacion de Angular.
+/**
+ * [Inicializacion de Aplicacion Angular]
+ * @type {[type]}
+ */
 var app = angular.module("WebClientASP",['ngRoute','ngMaterial','APIServicios']);
 
 app.config(function($mdThemingProvider){
@@ -8,20 +11,29 @@ app.config(function($mdThemingProvider){
     'hue-1':'400',
     'hue-2':'500',
     'hue-3':'700'
-    
   })
   .accentPalette('yellow')
   .warnPalette('orange')
   .backgroundPalette('grey');
 });
-//Configuracion de la aplicacion.
-//$routeProvider  para el manejo de vistas.
+
+
+/**
+ * [Configuracion del manejo de Vistas]
+ * @param  {[Object]} $routeProvider                   
+ */
 app.config(function($routeProvider){
     
-    $routeProvider.when("/", {
+    $routeProvider
+    .when("/vistas/cotizador", {
         templateUrl : "/vistas/cotizador.html",
-        controller : "CotizadorControlador"
+        controller  : "CotizadorControlador"
     })
+    .when("/vistas/Usuarios", {
+        templateUrl : "/vistas/Usuarios.html",
+        controller  : "UsuariosControlador"
+    })
+
     //En caso de no coincidir nos redijira a la principal
     .otherwise({ reditrectTo : "/" });
 });

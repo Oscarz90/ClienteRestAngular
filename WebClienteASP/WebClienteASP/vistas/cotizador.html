@@ -1,6 +1,16 @@
-<md-button ng-click="ObtenerTipoVehiculo()">Cargar Combo Tipo Vehiculos</md-button>
-
-<md-select placeholder="Pick" ng-model="someVal">
-  <md-option value="1">One</md-option>
-  <md-option value="2">Two</md-option>
-</md-select>
+<div layout="column" layout-padding>
+  <h2 class="md-title">Cotizar Auto</h2>
+  <div layout="row">
+    
+      <md-select ng-model="size" placeholder="Tipos Vehiculo" flex="25">
+        <md-option ng-repeat="size in sizes" value="{{size}}">{{size}}</md-option>
+      </md-select>
+    
+    
+      <md-select ng-model="size" placeholder="Tipos Vehiculo" flex="25">
+        <md-option ng-repeat="size in sizes" value="{{size}}">{{size}}</md-option>
+      </md-select>
+    
+    
+  </div>
+</div>

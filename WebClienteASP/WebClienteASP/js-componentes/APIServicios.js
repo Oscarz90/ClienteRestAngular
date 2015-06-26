@@ -55,39 +55,7 @@ servicios.factory("APIServicios", function($http, $q)
   return LLamarServicio;
 });
 
-servicios.run(
+/*servicios.run(
   console.log("Aqui corre")
-);
-  /**
-   * API para llamada a servicios rest (WebMethod)
-   * @param {[string]}       : url          [Direccion del webmethod]
-   * @param {[object(json)]} : datos        [Entidad json con los datos para la peticion]
-   * @param {function}       : callback     [Funcion a ejecutar despues de la llamada]
-   * @param {[function]}     : postcallback [Funcion a ejecutar posterior al callback]
-   * @param {[object(json)]} : respuesta    [Objeto que contendra la respuesta]
-   */
-  //Funcion antigua Version Juancho
-  /*function ServicioAPI(url,datos,callbackb,postcallback,contenedor){
-    self = this;
-    this.url          = url;
-    this.datos        = datos;
-    this.contenedor   = contenedor;
-    this.objecto      = {};
-    //Funciones a ejecutar despues de la llamada al webmethod
-    this.callback     = callbackb;
-    this.postcallback = postcallback;
-    
-    
-
-    //LLamar Servicio Rest
-     
-    this.llamarServicio = function(){
-      $http.post(this.url, this.datos).success(
-        function(respuesta){
-          //self.callback(this.contenedor,respuesta).then(self.postcallback(this.contenedor));
-        }
-      )
-    };
-  };*/
-
-
+);*/
+  

@@ -22,37 +22,13 @@
           <span flex></span>
         </div>
       </md-toolbar>
-      <md-content class="md-primary">
+      <md-content>
         <md-list>
-          <md-list-item ng-click="1" class="md-warn md-accent">
-            <p>Cotizador</p>
+          <md-list-item ng-click="1">
+            <p><a ng-href="#/vistas/cotizador" style="text-decoration: none;">Cotizador</a></p>
           </md-list-item>
-          <md-list-item ng-click="1" class="md-warn">
-            <p>Cotizador</p>
-          </md-list-item>
-          <md-list-item ng-click="1" class="md-warn">
-            <p>Cotizador</p>
-          </md-list-item>
-          <md-list-item ng-click="1" class="md-warn">
-            <p>Cotizador</p>
-          </md-list-item>
-          <md-list-item ng-click="1" class="md-warn">
-            <p>Cotizador</p>
-          </md-list-item>
-          <md-list-item ng-click="1" class="md-warn">
-            <p>Cotizador</p>
-          </md-list-item>
-          <md-list-item ng-click="1" class="md-warn">
-            <p>Cotizador</p>
-          </md-list-item>
-          <md-list-item ng-click="1" class="md-warn">
-            <p>Cotizador</p>
-          </md-list-item>
-          <md-list-item ng-click="1" class="md-warn">
-            <p>Cotizador</p>
-          </md-list-item>
-          <md-list-item ng-click="1" class="md-warn">
-            <p>Cotizador</p>
+          <md-list-item ng-click="1">
+            <p><a ng-href="#/vistas/Usuarios" style="text-decoration: none;">Usuarios</a></p>
           </md-list-item>
         </md-list>
       </md-content>
@@ -76,21 +52,25 @@
         </div>
       </md-toolbar>
       <md-content>
-
+        <div ng-view>
+        </div>
       <md-content>
     </div>
   <!-- Contenido -->
   
 
-<!-- Librerias Necesarias -->
+<!-- Angular Material -->
 <script src="/node_modules/angular/angular.js"></script>
 <script src="/node_modules/angular-route/angular-route.js"></script>
 <script src="/node_modules/angular-aria/angular-aria.js"></script>
 <script src="/node_modules/angular-animate/angular-animate.js"></script>
 <script src="/node_modules/angular-material/angular-material.js"></script>
+<!-- App Angularjs -->
 <script src="/js-componentes/App.js"></script>
 <script src="/js-componentes/APIServicios.js"></script>
+<!-- Controladores -->
 <script src="/controladores/CotizadorControlador.js"></script>
+<script src="/controladores/UsuariosControlador.js"></script>
 
 
 </body>

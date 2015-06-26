@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="controladores\CotizadorControlador.js" />
+    <Content Include="controladores\UsuariosControlador.js" />
     <Content Include="js-componentes\APIServicios.js" />
     <Content Include="js-componentes\App.js" />
     <Content Include="js-componentes\clases.js" />
