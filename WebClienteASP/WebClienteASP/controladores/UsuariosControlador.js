@@ -22,5 +22,27 @@ app.controller("UsuariosControlador",function($scope){
     }
   ];
 
+  $scope.UsuarioTemp={};
+  
+  /**
+   * [GuardarUsuario description]
+   */
+  $scope.GuardarUsuario=function(){
+
+  };
+
+  /**
+   * [Actualizar description]
+   */
+  $scope.ActualizarUsuario=function(){
+
+  };
+
+  /**
+   * [Borrar description]
+   */
+  $scope.BorrarUsuario=function(){
+
+  };
 
 });

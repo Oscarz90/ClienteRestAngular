@@ -51,26 +51,27 @@
         </md-button>
         </div>
       </md-toolbar>
-      <md-content>
-        <div ng-view>
-        </div>
-      <md-content>
+      <!--<md-content> Delegar a cada vista-->
+      <div ng-view>
+
+      </div>
+      <!--<md-content> Delegar a cada vista-->
     </div>
   <!-- Contenido -->
   
 
-<!-- Angular Material -->
-<script src="/node_modules/angular/angular.js"></script>
-<script src="/node_modules/angular-route/angular-route.js"></script>
-<script src="/node_modules/angular-aria/angular-aria.js"></script>
-<script src="/node_modules/angular-animate/angular-animate.js"></script>
-<script src="/node_modules/angular-material/angular-material.js"></script>
-<!-- App Angularjs -->
-<script src="/js-componentes/App.js"></script>
-<script src="/js-componentes/APIServicios.js"></script>
-<!-- Controladores -->
-<script src="/controladores/CotizadorControlador.js"></script>
-<script src="/controladores/UsuariosControlador.js"></script>
+  <!-- Angular Material -->
+  <script src="/node_modules/angular/angular.js"></script>
+  <script src="/node_modules/angular-route/angular-route.js"></script>
+  <script src="/node_modules/angular-aria/angular-aria.js"></script>
+  <script src="/node_modules/angular-animate/angular-animate.js"></script>
+  <script src="/node_modules/angular-material/angular-material.js"></script>
+  <!-- App Angularjs -->
+  <script src="/js-componentes/App.js"></script>
+  <script src="/js-componentes/APIServicios.js"></script>
+  <!-- Controladores -->
+  <script src="/controladores/CotizadorControlador.js"></script>
+  <script src="/controladores/UsuariosControlador.js"></script>
 
 
 </body>

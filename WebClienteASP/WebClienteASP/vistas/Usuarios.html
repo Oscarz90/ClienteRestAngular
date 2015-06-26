@@ -1,1 +1,29 @@
-<h1>Hola usuarios </h1>
+<div layout="row">
+  <!-- Formulario Usuarios -->
+  <md-content layout-padding layout-fill>
+    <md-input-container class="md-icon-float">
+      <!-- Use floating label instead of placeholder -->
+      <label>Nombre</label>
+      <md-icon md-svg-src="iconos/UserIcon.svg" class="Nombre"></md-icon>
+      <input ng-model="usuarios.nombre" type="text">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <!-- Use floating label instead of placeholder -->
+      <label>Web</label>
+      <md-icon md-svg-src="iconos/WorldIcon.svg" class="Web"></md-icon>
+      <input ng-model="usuarios.web" type="text">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <!-- Use floating label instead of placeholder -->
+      <label>Edad</label>
+      <md-icon md-svg-src="iconos/ClockIcon.svg" class="Edad"></md-icon>
+      <input ng-model="usuarios.edad" type="text">
+    </md-input-container>
+    <md-input-container class="md-icon-float">
+      <!-- Use floating label instead of placeholder -->
+      <label>Profesion</label>
+      <md-icon md-svg-src="iconos/EducationIcon.svg" class="Profesion"></md-icon>
+      <input ng-model="usuarios.profesion" type="text">
+    </md-input-container>
+  </md-content>
+</div>

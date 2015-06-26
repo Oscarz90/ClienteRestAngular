@@ -504,8 +504,12 @@
     <Content Include="node_modules\angular\package.json" />
     <Content Include="node_modules\angular\README.md" />
     <Content Include="iconos\menu.svg" />
-    <Content Include="iconos\subMenu.svg" />
-    <Content Include="iconos\toggle.svg" />
+    <Content Include="iconos\ClockIcon.svg" />
+    <Content Include="iconos\config.svg" />
+    <Content Include="iconos\EducationIcon.svg" />
+    <Content Include="iconos\TimeIcon.svg" />
+    <Content Include="iconos\UserIcon.svg" />
+    <Content Include="iconos\WorldIcon.svg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
