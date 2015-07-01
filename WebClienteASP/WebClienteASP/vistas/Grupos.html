@@ -1,0 +1,52 @@
+<div layout="row" layout-padding layout-fill layout-wrap>
+  <md-content flex> 
+    <!-- Formulario Usuarios -->
+    <fieldset style="border-style: solid; border-width: 1px;">
+      <legend>Grupo</legend>
+        <form name="FormUsuario">
+          <!-- Contenido -->
+          <md-select placeholder="Plan" ng-model="PlanCarreraSeleccionado" >
+            <md-option ng-repeat="data in PlanCarrera" value="{{data}}">{{data.Plan}}</md-option>
+          </md-select>
+          <md-select placeholder="Semestre" ng-model="SemestreSeleccionado" >
+            <md-option ng-repeat="data in Semestre" value="{{data}}">{{data}}</md-option>
+          </md-select>
+          <md-select placeholder="Grupo" ng-model="GrupoSeleccionado" >
+            <md-option ng-repeat="data in Grupo" value="{{data}}">{{data}}</md-option>
+          </md-select>
+        </form>
+    </fieldset>
+    <br>
+    <fieldset style="border-style: solid; border-width: 1px;">
+      <legend>Materia - Docente</legend>
+        <form name="FormUsuario">
+          <!-- Contenido -->
+          <md-select placeholder="Docente" ng-model="DocenteSeleccionado" required>
+            <md-option ng-repeat="data in Docente" value="{{data}}">{{data.Nombre}}</md-option>
+          </md-select>
+          <md-select placeholder="Materia" ng-model="MateriaSeleccionado" required>
+            <md-option ng-repeat="data in Materia" value="{{data}}">{{data.Descripcion}}</md-option>
+          </md-select>
+          <md-button  class="md-fab md-primary" aria-label="Agregar Usuario" ng-click="GuardarUsuario()" ng-disabled="FormUsuario.$invalid">
+            <md-icon md-svg-src="iconos/AddIcon.svg" ng-style="{'color':'white'}"></md-icon>
+          </md-button>
+        </form>
+    </fieldset>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Materia</th>
+          <th>Docente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MateriaPrueba</td>
+          <td>DocentePrueba</td>
+        </tr>
+      </tbody>
+      
+    </table>
+    
+  </md-content>
+</div>

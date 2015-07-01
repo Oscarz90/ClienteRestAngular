@@ -33,6 +33,10 @@ app.config(function($routeProvider){
         templateUrl : "/vistas/Usuarios.html",
         controller  : "UsuariosControlador"
     })
+    .when("/vistas/Grupos", {
+        templateUrl : "/vistas/Grupos.html",
+        controller  : "GruposControlador"
+    })
 
     //En caso de no coincidir nos redijira a la principal
     .otherwise({ reditrectTo : "/" });

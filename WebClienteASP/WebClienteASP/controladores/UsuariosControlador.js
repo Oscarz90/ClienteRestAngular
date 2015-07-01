@@ -3,6 +3,13 @@
  * @param  {[type]} $scope          [Variable $scope global angularjs]
  */
 app.controller("UsuariosControlador",function($scope){
+  
+  /**
+   * [usuario Usuario para captura de formulario]
+   * @type {Object}
+   */
+  $scope.usuario={};
+
   /**
    * [usuarios Usuarios Iniciales]
    * @type {Array}
@@ -17,18 +24,19 @@ app.controller("UsuariosControlador",function($scope){
     {
       nombre      : "Pepito"
       , web       : "http://pepito.com"
-      , edad      : "? años"
+      , edad      : "89 años"
       , profesion : "vender palotes!"
     }
   ];
 
-  $scope.UsuarioTemp={};
+  
   
   /**
    * [GuardarUsuario description]
    */
   $scope.GuardarUsuario=function(){
-
+    $scope.usuarios.push($scope.usuario);
+    $scope.usuario={};
   };
 
   /**

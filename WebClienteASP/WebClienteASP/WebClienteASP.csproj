@@ -99,6 +99,7 @@
   <ItemGroup>
     <Content Include="controladores\CotizadorControlador.js" />
     <Content Include="controladores\UsuariosControlador.js" />
+    <Content Include="index.html" />
     <Content Include="js-componentes\APIServicios.js" />
     <Content Include="js-componentes\App.js" />
     <Content Include="js-componentes\clases.js" />
@@ -510,6 +511,7 @@
     <Content Include="iconos\TimeIcon.svg" />
     <Content Include="iconos\UserIcon.svg" />
     <Content Include="iconos\WorldIcon.svg" />
+    <Content Include="iconos\AddIcon.svg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

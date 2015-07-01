@@ -1,29 +1,61 @@
-<div layout="row">
-  <!-- Formulario Usuarios -->
-  <md-content layout-padding layout-fill>
-    <md-input-container class="md-icon-float">
-      <!-- Use floating label instead of placeholder -->
-      <label>Nombre</label>
-      <md-icon md-svg-src="iconos/UserIcon.svg" class="Nombre"></md-icon>
-      <input ng-model="usuarios.nombre" type="text">
-    </md-input-container>
-    <md-input-container class="md-icon-float">
-      <!-- Use floating label instead of placeholder -->
-      <label>Web</label>
-      <md-icon md-svg-src="iconos/WorldIcon.svg" class="Web"></md-icon>
-      <input ng-model="usuarios.web" type="text">
-    </md-input-container>
-    <md-input-container class="md-icon-float">
-      <!-- Use floating label instead of placeholder -->
-      <label>Edad</label>
-      <md-icon md-svg-src="iconos/ClockIcon.svg" class="Edad"></md-icon>
-      <input ng-model="usuarios.edad" type="text">
-    </md-input-container>
-    <md-input-container class="md-icon-float">
-      <!-- Use floating label instead of placeholder -->
-      <label>Profesion</label>
-      <md-icon md-svg-src="iconos/EducationIcon.svg" class="Profesion"></md-icon>
-      <input ng-model="usuarios.profesion" type="text">
-    </md-input-container>
-  </md-content>
+<div layout="row" layout-padding layout-fill layout-wrap> 
+  <div flex="100">
+    <!-- Formulario Usuarios -->
+  <fieldset style="border-style: solid; border-width: 1px;">
+    <legend>Admon. Usuarios</legend>
+    <md-content >
+    <form name="FormUsuario">
+      <!-- Contenido -->
+      <md-input-container class="md-icon-float">
+        <!-- Use floating label instead of placeholder -->
+        <label>Nombre</label>
+        <md-icon md-svg-src="iconos/UserIcon.svg" class="Nombre"></md-icon>
+        <input ng-model="usuario.nombre" type="text" name="FormUsuario.nombre" required>
+      </md-input-container>
+      <md-input-container class="md-icon-float">
+        <!-- Use floating label instead of placeholder -->
+        <label>Web</label>
+        <md-icon md-svg-src="iconos/WorldIcon.svg" class="Web"></md-icon>
+        <input ng-model="usuario.web" type="text" name="FormUsuario.web" required>
+      </md-input-container>
+      <md-input-container class="md-icon-float">
+        <!-- Use floating label instead of placeholder -->
+        <label>Edad</label>
+        <md-icon md-svg-src="iconos/ClockIcon.svg" class="Edad"></md-icon>
+        <input ng-model="usuario.edad" type="number" name="FormUsuario.edad" required>
+      </md-input-container>
+      <md-input-container class="md-icon-float">
+        <!-- Use floating label instead of placeholder -->
+        <label>Profesion</label>
+        <md-icon md-svg-src="iconos/EducationIcon.svg" class="Profesion"></md-icon>
+        <input ng-model="usuario.profesion" type="text" name="FormUsuario.profesion" required>
+      </md-input-container>
+      <md-button  class="md-fab md-primary" aria-label="Agregar Usuario" ng-click="GuardarUsuario()" ng-disabled="FormUsuario.$invalid">
+        <md-icon md-svg-src="iconos/AddIcon.svg" ng-style="{'color':'white'}"></md-icon>
+      </md-button>
+        </form>
+    </md-content>
+  </fieldset>
+  </div>
+  
+  <!--<md-divider></md-divider>-->
+  <div flex>
+    <table border="1">
+      <tr>
+        <th>Edicion</th>
+        <th>Nombre</th>
+        <th>Web</th>
+        <th>Edad</th> 
+        <th>Profesion</th>
+      </tr>
+      <tr ng-repeat="datos in usuarios">
+        <td>nada</td>
+        <td>{{datos.nombre}}</td>
+        <td>{{datos.web}}</td> 
+        <td>{{datos.edad}}</td>
+        <td>{{datos.profesion}}</td>
+      </tr>
+    </table>
+  </div>
+  
 </div>

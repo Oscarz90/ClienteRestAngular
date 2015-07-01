@@ -1,16 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebClienteASP.WebForm1" %>
-
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="WebClientASP">
-<head runat="server">
-
+<head>
+  <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <title></title>
   <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
   <link rel="stylesheet" href="/css-componentes/App.css"/>
-
-  <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
-  <title></title>
 </head>
 <body layout="row">
   <!--Barra Navegacion Lateral-->
@@ -29,6 +25,9 @@
           </md-list-item>
           <md-list-item ng-click="1">
             <p><a ng-href="#/vistas/Usuarios" style="text-decoration: none;">Usuarios</a></p>
+          </md-list-item>
+          <md-list-item ng-click="1">
+            <p><a ng-href="#/vistas/Grupos" style="text-decoration: none;">Grupos</a></p>
           </md-list-item>
         </md-list>
       </md-content>
@@ -72,6 +71,7 @@
   <!-- Controladores -->
   <script src="/controladores/CotizadorControlador.js"></script>
   <script src="/controladores/UsuariosControlador.js"></script>
+  <script src="/controladores/GruposControlador.js"></script>
 
 
 </body>
