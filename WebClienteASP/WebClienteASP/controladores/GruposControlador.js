@@ -122,10 +122,13 @@ app.controller("GruposControlador",function($scope){
 
   $scope.MateriasOfertadas=[];
 
+  $scope.MateriaDocenteSeleccionada={};
+
+  $scope.MateriaDocente=[];
   // METODOS
   $scope.GuardarMateria=function(datos){
     console.log(datos);
-    $scope.MateriasOfertadas.push(datos);
+    $scope.MateriaDocente.push(datos);
   };
   
   // METODOS

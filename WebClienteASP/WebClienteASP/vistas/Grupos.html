@@ -21,15 +21,16 @@
       <legend>Materia - Docente</legend>
         <form name="FormUsuario">
           <!-- Contenido -->
-          <md-select placeholder="Docente" ng-model="DocenteSeleccionado" required>
+          <md-select placeholder="Docente" ng-model="MateriaDocenteSeleccionada.Docente" required>
             <md-option ng-repeat="data in Docente" value="{{data}}">{{data.Nombre}}</md-option>
           </md-select>
-          <md-select placeholder="Materia" ng-model="MateriaSeleccionado" required>
+          <md-select placeholder="Materia" ng-model="MateriaDocenteSeleccionada.Materia" required>
             <md-option ng-repeat="data in Materia" value="{{data}}">{{data.Descripcion}}</md-option>
           </md-select>
-          <md-button  class="md-fab md-primary" aria-label="Agregar Usuario" ng-click="GuardarUsuario()" ng-disabled="FormUsuario.$invalid">
+          <md-button  class="md-fab md-primary" aria-label="Agregar Usuario" ng-click="GuardarMateria(MateriaDocenteSeleccionada)" ng-disabled="FormUsuario.$invalid">
             <md-icon md-svg-src="iconos/AddIcon.svg" ng-style="{'color':'white'}"></md-icon>
           </md-button>
+          {{MateriaDocenteSeleccionada}}
         </form>
     </fieldset>
     <table border="1">
@@ -40,9 +41,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>MateriaPrueba</td>
-          <td>DocentePrueba</td>
+        <tr ng-repeat="data in MateriaDocente">
+          <td>{{data.Materia.Descripcion}}</td>
+          <td>{{data.Docente.Nombre}}</td>
         </tr>
       </tbody>
       
