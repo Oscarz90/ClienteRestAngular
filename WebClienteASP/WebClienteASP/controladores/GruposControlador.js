@@ -188,6 +188,17 @@ app.controller("GruposControlador",function($scope){
 
   };
 
+  $scope.Prueba=function(Dia,Hora){
+    var prueba=[];
+    var aux={};
+    aux.Dia=Dia;
+    aux.Hora=Hora;
+    prueba.push(aux);
+    console.log(prueba);
+  };
+
+
+
 
   
   

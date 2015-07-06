@@ -55,39 +55,14 @@
           <th ng-repeat="data in Dias">{{data.dia}}</th>
         </tr>
       </thead>
-      <tbody ng-repeat="data in Horas">
-        <tr>
+      <tbody>
+        <tr ng-repeat="data in Horas">
           <td>{{data.Hora}}</td>
-          <th> 
-            <md-button class="md-icon-button" aria-label="More" ng-click="MostrarInfo(data.Hora, 'Lunes')">
+          <td ng-repeat="datos in Dias"> 
+            <md-button class="md-icon-button" aria-label="More" ng-click="Prueba(datos, data)">
               <md-icon md-svg-icon="iconos/AddIcon2.svg"></md-icon>
             </md-button>
-          </th>
-          <th>
-            <md-button class="md-icon-button" aria-label="More" ng-click="MostrarInfo(data.Hora, 'Martes')">
-              <md-icon md-svg-icon="iconos/AddIcon2.svg"></md-icon>
-            </md-button>
-          </th>
-          <th>
-            <md-button class="md-icon-button" aria-label="More" ng-click="MostrarInfo(data.Hora, 'Miercoles')">
-              <md-icon md-svg-icon="iconos/AddIcon2.svg"></md-icon>
-            </md-button>
-          </th>
-          <th>
-            <md-button class="md-icon-button" aria-label="More" ng-click="MostrarInfo(data.Hora, 'Jueves')">
-              <md-icon md-svg-icon="iconos/AddIcon2.svg"></md-icon>
-            </md-button>
-          </th>
-          <th>
-            <md-button class="md-icon-button" aria-label="More" ng-click="MostrarInfo(data.Hora, 'Viernes')">
-              <md-icon md-svg-icon="iconos/AddIcon2.svg"></md-icon>
-            </md-button>
-          </th>
-          <th>
-            <md-button class="md-icon-button" aria-label="More" ng-click="MostrarInfo(data.Hora, 'Sabado')">
-              <md-icon md-svg-icon="iconos/AddIcon2.svg"></md-icon>
-            </md-button>
-          </th>
+          </td>
         </tr>
       </tbody>
       
