@@ -27,7 +27,7 @@
           <md-select placeholder="Materia" ng-model="MateriaSeleccionado" required>
             <md-option ng-repeat="data in Materia" value="{{data}}">{{data.Descripcion}}</md-option>
           </md-select>
-          <md-button  class="md-fab md-primary" aria-label="Agregar Usuario" ng-click="GuardarUsuario()" ng-disabled="FormUsuario.$invalid">
+          <md-button  class="md-fab md-primary" aria-label="Agregar Usuario" ng-click="GuardarMateria()" ng-disabled="FormUsuario.$invalid">
             <md-icon md-svg-src="iconos/AddIcon.svg" ng-style="{'color':'white'}"></md-icon>
           </md-button>
         </form>
@@ -40,9 +40,29 @@
         </tr>
       </thead>
       <tbody>
+        <tr ng-repeat="data in MateriaDocente">
+          <td>{{data.Materia.Descripcion}}</td>
+          <td>{{data.Docente.Nombre}}</td>
+        </tr>
+      </tbody>
+      
+    </table>
+    <br>
+    <table border="1" flex>
+      <thead>
         <tr>
-          <td>MateriaPrueba</td>
-          <td>DocentePrueba</td>
+          <th>Horas</th>
+          <th ng-repeat="data in Dias">{{data.dia}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="data in Horas">
+          <td>{{data.Hora}}</td>
+          <td ng-repeat="datos in Dias"> 
+            <md-button class="md-icon-button" aria-label="More" ng-click="Prueba(datos, data)">
+              <md-icon md-svg-icon="iconos/AddIcon2.svg"></md-icon>
+            </md-button>
+          </td>
         </tr>
       </tbody>
       

@@ -7,6 +7,49 @@ app.controller("GruposControlador",function($scope){
   /*
     MODELOS INICIALES
    */
+  // Calendario Dias
+  $scope.Dias=[
+    {
+      dia:"Lunes"
+    } ,
+    {
+      dia:"Martes"
+    } ,
+    {
+      dia:"Miercoles"
+    } ,
+    {
+      dia:"Jueves"
+    } ,
+    {
+      dia:"Viernes"
+    } ,
+    {
+      dia:"Sabado"
+    } ,
+  ];
+
+  // Horas Calendario
+  $scope.Horas=[
+   {
+    Hora:"7:00 a 8:00"
+   },
+   {
+    Hora:"8:00 a 9:00"
+   },
+   {
+    Hora:"9:00 a 10:00"
+   },
+   {
+    Hora:"10:00 a 11:00"
+   },
+   {
+    Hora:"11:00 a 12:00"
+   },
+   {
+    Hora:"12:00 a 13:00"
+   }, 
+  ];
   
   // PLAN CARRERA
   $scope.PlanCarrera=[
@@ -120,15 +163,45 @@ app.controller("GruposControlador",function($scope){
   ];
   $scope.PeriodoSeleccionado;
 
-  $scope.MateriasOfertadas=[];
+  $scope.MateriaDocenteSeleccionada={};
 
-  // METODOS
-  $scope.GuardarMateria=function(datos){
-    console.log(datos);
-    $scope.MateriasOfertadas.push(datos);
-  };
+  $scope.MateriaDocente=[];
   
-  // METODOS
+  // FUNCIONES
+  $scope.GuardarMateria=function(){
+    //Convertir Json a Objecto
+    $scope.MateriaDocenteSeleccionada.Materia=angular.fromJson($scope.MateriaSeleccionado);
+    $scope.MateriaDocenteSeleccionada.Docente=angular.fromJson($scope.DocenteSeleccionado);
+    //Agregar Objecto 
+    //Falta Validar que no se repitan
+    $scope.MateriaDocente.push(angular.fromJson($scope.MateriaDocenteSeleccionada));
+    $scope.MateriaDocenteSeleccionada={};
+    $scope.MateriaDocenteSeleccionada.Materia={};
+    $scope.MateriaDocenteSeleccionada.Docente={};
+    //console.log($scope.MateriaDocente);
+  };
+
+  //
+  $scope.MostrarInfo=function(data,datab){
+    console.log(data);
+    console.log(datab);
+
+  };
+
+  $scope.Prueba=function(Dia,Hora){
+    var prueba=[];
+    var aux={};
+    aux.Dia=Dia;
+    aux.Hora=Hora;
+    prueba.push(aux);
+    console.log(prueba);
+  };
+
+
+
+
+  
+  
 
 
 });
