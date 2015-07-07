@@ -2,7 +2,7 @@
  * [Controlador para Vista Grupos]
  * @param  {[type]} $scope          [Variable $scope global angularjs]
  */
-app.controller("GruposControlador",function($scope){
+app.controller("GruposControlador",function($scope,$mdDialog){
   
   /*
     MODELOS INICIALES
@@ -187,9 +187,10 @@ app.controller("GruposControlador",function($scope){
     console.log(datab);
 
   };
-
+  
+  var prueba=[];
   $scope.Prueba=function(Dia,Hora){
-    var prueba=[];
+    
     var aux={};
     aux.Dia=Dia;
     aux.Hora=Hora;
@@ -197,6 +198,35 @@ app.controller("GruposControlador",function($scope){
     console.log(prueba);
   };
 
+
+  ////
+  $scope.showAdvanced = function(ev) {
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'dialog1.tmpl.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+    })
+    .then(function(answer) {
+      $scope.alert = 'You said the information was "' + answer + '".';
+    }, function() {
+      $scope.alert = 'You cancelled the dialog.';
+    });
+  };
+  ///
+  function DialogController($scope, $mdDialog) {
+  $scope.hide = function() {
+    $mdDialog.hide();
+  };
+
+  $scope.cancel = function() {
+    $mdDialog.cancel();
+  };
+
+  $scope.answer = function(answer) {
+    $mdDialog.hide(answer);
+  };
+}
 
 
 
