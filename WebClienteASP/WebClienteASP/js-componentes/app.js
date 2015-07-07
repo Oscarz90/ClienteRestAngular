@@ -41,3 +41,14 @@ app.config(function($routeProvider){
     //En caso de no coincidir nos redijira a la principal
     .otherwise({ reditrectTo : "/" });
 });
+/*
+
+(function (angular) {
+  'use strict';
+  
+
+  window.app = angular.module('MicroSitioApp', ['hdiClasesGlobalesFactoria', 'hdiFormatoDirectivas', 'ngMaterial', 'ngMessages']);
+                  //.config(Configuracion);
+
+})(window.angular);
+ */
