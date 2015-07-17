@@ -3,8 +3,7 @@
     <!-- Formulario Usuarios -->
     <fieldset style="border-style: solid; border-width: 1px;">
       <legend>Grupo</legend>
-        <form name="FormUsuario">
-          <!-- Contenido -->
+        <form name="FormUsuario">          <!-- Contenido -->
           <md-select placeholder="Plan" ng-model="PlanCarreraSeleccionado" >
             <md-option ng-repeat="data in PlanCarrera" value="{{data}}">{{data.Plan}}</md-option>
           </md-select>
@@ -52,14 +51,14 @@
       <thead>
         <tr>
           <th>Horas</th>
-          <th ng-repeat="data in Dias">{{data.dia}}</th>
+          <th ng-repeat="dia in Dias">{{dia.dia}}</th>
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="data in Horas">
-          <td>{{data.Hora}}</td>
-          <td ng-repeat="datos in Dias"> 
-            <md-button class="md-icon-button" aria-label="More" ng-click="showAdvanced($event)">
+        <tr ng-repeat="hora in Horas">
+          <td>{{hora.Hora}}</td>
+          <td ng-repeat="dia in Dias"> 
+            <md-button class="md-icon-button" aria-label="More" ng-click="showAdvanced();Prueba(dia,hora)">
               <md-icon md-svg-icon="iconos/AddIcon2.svg"></md-icon>
             </md-button>
           </td>
@@ -67,50 +66,38 @@
       </tbody>
       
     </table>
+    <span ng-repeat="data in MateriaDocente">
+    {{data.Materia.Descripcion}} - {{data.Docente.Nombre}}
+    </span>
     
   </md-content>
   <script type="text/ng-template" id="dialog1.tmpl.html">
-<md-dialog aria-label="Mango (Fruit)">
-  <form>
-  <md-toolbar>
-    <div class="md-toolbar-tools">
-      <h2>Mango (Fruit)</h2>
-      <span flex></span>
-      <md-button class="md-icon-button" ng-click="answer('not applicable')">
-        <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
-      </md-button>
-    </div>
-  </md-toolbar>
-  <md-dialog-content>
-    <div>
-      <p>
-        The mango is a juicy stone fruit belonging to the genus Mangifera, consisting of numerous tropical fruiting trees, cultivated mostly for edible fruit. The majority of these species are found in nature as wild mangoes. They all belong to the flowering plant family Anacardiaceae. The mango is native to South and Southeast Asia, from where it has been distributed worldwide to become one of the most cultivated fruits in the tropics.
-      </p>
-
-      <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="img/mangues.jpg">
-
-      <p>
-        The highest concentration of Mangifera genus is in the western part of Malesia (Sumatra, Java and Borneo) and in Burma and India. While other Mangifera species (e.g. horse mango, M. foetida) are also grown on a more localized basis, Mangifera indica&mdash;the "common mango" or "Indian mango"&mdash;is the only mango tree commonly cultivated in many tropical and subtropical regions.
-      </p>
-      <p>
-        It originated in Indian subcontinent (present day India and Pakistan) and Burma. It is the national fruit of India, Pakistan, and the Philippines, and the national tree of Bangladesh. In several cultures, its fruit and leaves are ritually used as floral decorations at weddings, public celebrations, and religious ceremonies.
-      </p>
-    </div>
-  </md-dialog-content>
-
-  <div class="md-actions" layout="row">
-    <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" hide show-md>
-      More on Wikipedia
-    </md-button>
-    <span flex></span>
-    <md-button ng-click="answer('not useful')" class="md-primary">
-     Not Useful
-    </md-button>
-    <md-button ng-click="answer('useful')" class="md-primary">
-      Useful
-    </md-button>
-  </div>
-  </form>
-</md-dialog>
-</script>
+    <md-dialog aria-label="Agregar Materia">
+      <form>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <h2>Agregar Materia</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+              <md-icon md-svg-src="iconos/DeleteIcon.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+          </div>
+        </md-toolbar>
+        <md-dialog-content>
+          <md-select placeholder="Docente" ng-model="DocenteSeleccionado" required>
+            <md-option ng-repeat="data in ctrl.MateriaDocente" ng-value="{{data}}">{{data.Materia.Descripcion}} - {{data.Docente.Nombre}}</md-option>
+          </md-select>
+        </md-dialog-content>
+        <div class="md-actions" layout="row">
+          <span flex></span>
+          <md-button ng-click="answer('Aceptar Button')" class="md-primary">
+            Aceptar
+          </md-button>
+          <md-button ng-click="cancel()" class="md-primary">
+            Cancel
+          </md-button>
+        </div>
+      </form>
+    </md-dialog>
+  </script>
 </div>

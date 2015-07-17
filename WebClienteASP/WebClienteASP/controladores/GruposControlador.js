@@ -176,9 +176,10 @@ app.controller("GruposControlador",function($scope,$mdDialog){
     //Falta Validar que no se repitan
     $scope.MateriaDocente.push(angular.fromJson($scope.MateriaDocenteSeleccionada));
     $scope.MateriaDocenteSeleccionada={};
-    $scope.MateriaDocenteSeleccionada.Materia={};
-    $scope.MateriaDocenteSeleccionada.Docente={};
+    $scope.MateriaSeleccionado=null;
+    $scope.DocenteSeleccionado=null;
     //console.log($scope.MateriaDocente);
+    console.log($scope.MateriaDocente);
   };
 
   //
@@ -190,43 +191,50 @@ app.controller("GruposControlador",function($scope,$mdDialog){
   
   var prueba=[];
   $scope.Prueba=function(Dia,Hora){
-    
-    var aux={};
-    aux.Dia=Dia;
-    aux.Hora=Hora;
-    prueba.push(aux);
-    console.log(prueba);
+    console.log("Dia");
+    console.log(Dia);
+    console.log("Hora");
+    console.log(Hora);
   };
+
 
 
   ////
-  $scope.showAdvanced = function(ev) {
+  $scope.showAdvanced = function() {
+    console.log($scope.MateriaDocente.lenght);
     $mdDialog.show({
       controller: DialogController,
       templateUrl: 'dialog1.tmpl.html',
+      locals: {
+        MateriaDocente: $scope.MateriaDocente
+      },
+      bindToController: true,
       parent: angular.element(document.body),
-      targetEvent: ev,
+      targetEvent: $scope.$event,
+      controllerAs: 'ctrl'
     })
-    .then(function(answer) {
-      $scope.alert = 'You said the information was "' + answer + '".';
-    }, function() {
-      $scope.alert = 'You cancelled the dialog.';
-    });
+    .then(
+      function(answer) {
+        console.log('You said the information was "' + answer + '".');
+      }, function() {
+        console.log('You cancelled the dialog.');
+      }
+    );
   };
-  ///
+  //controlador del dialogo
   function DialogController($scope, $mdDialog) {
-  $scope.hide = function() {
-    $mdDialog.hide();
-  };
+    $scope.hide = function() {
+      $mdDialog.hide();
+    };
 
-  $scope.cancel = function() {
-    $mdDialog.cancel();
-  };
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
 
-  $scope.answer = function(answer) {
-    $mdDialog.hide(answer);
+    $scope.answer = function(answer) {
+      $mdDialog.hide(answer);
+    };
   };
-}
 
 
 
